@@ -1,0 +1,45 @@
+{
+  "name": "@oniryk/dreamer-xls",
+  "version": "0.0.5",
+  "description": "deliver lucid queries as xlsx file",
+  "repository": "https://github.com/oniryk-labs/dreamer-xls",
+  "homepage": "https://dreamer.oniryk.dev/docs/format/xlsx",
+  "main": "build/index.js",
+  "type": "module",
+  "types": "build/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "del-cli build",
+    "test": "tsx --test ./tests/**/*.spec.*",
+    "prepublish": "npm run build",
+    "pni": "npm run build && npm pack && rm -rf ../demo/node_modules/@oniryk/dreamer-xls && mkdir -p ../demo/node_modules/@oniryk/dreamer-xls && tar -xzf *.tgz -C ../demo/node_modules/@oniryk/dreamer-xls --strip-components 1 && rm *.tgz"
+  },
+  "author": {
+    "name": "brunoziie",
+    "email": "eu@brunoziie.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "node-xlsx": "^0.24.0"
+  },
+  "devDependencies": {
+    "@adonisjs/core": "^6.14.1",
+    "@adonisjs/eslint-config": "^1.3.0",
+    "@adonisjs/prettier-config": "^1.4.0",
+    "@adonisjs/tsconfig": "^1.4.0",
+    "@types/node": "^22.7.5",
+    "del-cli": "^6.0.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "@adonisjs/core": "^6.14.1"
+  }
+}
