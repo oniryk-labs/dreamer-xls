@@ -1,12 +1,18 @@
 {
   "name": "@oniryk/dreamer-xls",
   "version": "0.0.5",
-  "description": "deliver lucid queries as xlsx file",
+  "description": "deliver adonisjs/lucid queries as xlsx file",
   "repository": "https://github.com/oniryk-labs/dreamer-xls",
   "homepage": "https://dreamer.oniryk.dev/docs/format/xlsx",
   "main": "build/index.js",
   "type": "module",
   "types": "build/index.d.ts",
+  "keywords": [
+    "dreamer",
+    "xls",
+    "xlsx",
+    "adonisjs"
+  ],
   "publishConfig": {
     "access": "public",
     "tag": "latest"
